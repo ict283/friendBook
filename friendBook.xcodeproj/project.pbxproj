@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		526346B525F1E70400E40FA9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 526346B425F1E70400E40FA9 /* main.cpp */; };
+		52F8F84025F2510E00210F00 /* FriendBook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52F8F83E25F2510E00210F00 /* FriendBook.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		526346B125F1E70400E40FA9 /* friendBook */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = friendBook; sourceTree = BUILT_PRODUCTS_DIR; };
 		526346B425F1E70400E40FA9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		52F8F83E25F2510E00210F00 /* FriendBook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FriendBook.cpp; sourceTree = "<group>"; };
+		52F8F83F25F2510E00210F00 /* FriendBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendBook.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				526346B425F1E70400E40FA9 /* main.cpp */,
+				52F8F83E25F2510E00210F00 /* FriendBook.cpp */,
+				52F8F83F25F2510E00210F00 /* FriendBook.h */,
 			);
 			path = friendBook;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F8F84025F2510E00210F00 /* FriendBook.cpp in Sources */,
 				526346B525F1E70400E40FA9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
