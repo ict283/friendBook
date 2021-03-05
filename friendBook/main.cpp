@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         acc3=acc1;
         acc3.display();
 
-        /* Program will crash with a memory allocation error */
+        /* Program will not crash with a memory allocation error */
 
         return 0;
 }
