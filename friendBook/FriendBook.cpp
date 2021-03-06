@@ -8,6 +8,12 @@ FriendBook::FriendBook(string name){
         friendList = new string [3];
 }
 
+FriendBook::FriendBook(FriendBook &fb){
+        your_name =fb.your_name;
+        count=fb.count;
+        friendList = fb.friendList;
+}
+
 FriendBook::~FriendBook(){
         delete[] friendList;
         friendList=NULL;

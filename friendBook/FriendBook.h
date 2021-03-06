@@ -14,6 +14,8 @@ class FriendBook {
 public:
 
 FriendBook(string name);
+    
+FriendBook(FriendBook &fb); //default copy constructor
 
 ~FriendBook();
 

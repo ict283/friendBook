@@ -18,9 +18,9 @@ int main(int argc, const char * argv[]) {
         acc2.display();
 
         //Attempt to create a copy using default '=' operator
-        FriendBook acc3("");
-        acc3=acc1;
-        acc3.display();
+        //FriendBook acc3("");
+        //acc3=acc1;
+        //acc3.display();
 
         /* Program will crash with a memory allocation error */
 
