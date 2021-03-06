@@ -8,6 +8,13 @@ FriendBook::FriendBook(string name){
         friendList = new string [3];
 }
 
+FriendBook::FriendBook(FriendBook &fb){
+        count=0;
+        friendList = new string[3];
+        copy(fb);
+        cout<<"*New member "+your_name<<endl;
+}
+
 FriendBook::~FriendBook(){
         delete[] friendList;
         friendList=NULL;
@@ -31,4 +38,28 @@ void FriendBook::display(){
                 cout<<friendList[i]+", ";
         }
         cout<<endl<<endl;
+}
+
+void FriendBook::copy (FriendBook &fb){
+        your_name = fb.getName();
+        for(int i =0; i<3; i++) {
+                if(fb.getFriendList()[i]!="") {
+                        addFriend(fb.getFriendList()[i]);
+                }else{
+                        break;
+                }
+        }
+}
+
+string FriendBook::getName(){
+        return this->your_name;
+}
+
+string* FriendBook::getFriendList(){
+        return this->friendList;
+}
+
+FriendBook& FriendBook::operator = (FriendBook &fb){
+        copy(fb);
+        return *this;
 }

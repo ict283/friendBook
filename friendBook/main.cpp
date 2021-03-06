@@ -13,16 +13,16 @@ int main(int argc, const char * argv[]) {
         acc1.addFriend("June");
         acc1.display();
 
-        //Attempt to create a copy using default copy constructor
+        //Attempt to create a copy using custom copy constructor
         FriendBook acc2(acc1);
         acc2.display();
 
-        //Attempt to create a copy using default '=' operator
+        //Attempt to create a copy using custom '=' operator
         FriendBook acc3("");
         acc3=acc1;
         acc3.display();
 
-        /* Program will crash with a memory allocation error */
+        /* Program will no longer crash with a memory allocation error */
 
         return 0;
 }
