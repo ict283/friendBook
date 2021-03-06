@@ -30,6 +30,8 @@ void copy (FriendBook &fb);
 string getName();
     
 string* getFriendList();
+    
+FriendBook& operator = (FriendBook &fb); //custom '=' operator
 
 private:
 

@@ -58,3 +58,8 @@ string FriendBook::getName(){
 string* FriendBook::getFriendList(){
         return this->friendList;
 }
+
+FriendBook& FriendBook::operator = (FriendBook &fb){
+    copy(fb);
+    return *this;
+}
