@@ -9,10 +9,10 @@ FriendBook::FriendBook(string name){
 }
 
 FriendBook::FriendBook(FriendBook &fb){
-    count=0;
-    friendList = new string[3];
-    copy(fb);
-    cout<<"*New member "+your_name<<endl;
+        count=0;
+        friendList = new string[3];
+        copy(fb);
+        cout<<"*New member "+your_name<<endl;
 }
 
 FriendBook::~FriendBook(){
@@ -60,6 +60,6 @@ string* FriendBook::getFriendList(){
 }
 
 FriendBook& FriendBook::operator = (FriendBook &fb){
-    copy(fb);
-    return *this;
+        copy(fb);
+        return *this;
 }
