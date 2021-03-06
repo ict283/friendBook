@@ -15,7 +15,7 @@ public:
 
 FriendBook(string name);
     
-FriendBook(FriendBook &fb); //default copy constructor
+FriendBook(FriendBook &fb); //custom copy constructor
 
 ~FriendBook();
 
@@ -24,6 +24,12 @@ void addFriend(string name);
 void edtFriend(int pos, string name);
 
 void display();
+    
+void copy (FriendBook &fb);
+    
+string getName();
+    
+string* getFriendList();
 
 private:
 
