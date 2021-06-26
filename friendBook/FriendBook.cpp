@@ -8,6 +8,13 @@ FriendBook::FriendBook(string name){
         friendList = new string [3];
 }
 
+//system-generated (not ideal)
+FriendBook::FriendBook(FriendBook &fb){
+    your_name =fb.your_name;
+    count=fb.count;
+    friendList = fb.friendList;
+}
+
 FriendBook::~FriendBook(){
         delete[] friendList;
         friendList=NULL;
@@ -31,4 +38,12 @@ void FriendBook::display(){
                 cout<<friendList[i]+", ";
         }
         cout<<endl<<endl;
+}
+
+//system-generated (not ideal)
+FriendBook& FriendBook::operator = (FriendBook &fb){
+    your_name =fb.your_name;
+    count=fb.count;
+    friendList = fb.friendList;
+    return *this;
 }

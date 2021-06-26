@@ -14,6 +14,8 @@ class FriendBook {
 public:
 
 FriendBook(string name);
+    
+FriendBook(FriendBook &fb);
 
 ~FriendBook();
 
@@ -22,6 +24,8 @@ void addFriend(string name);
 void edtFriend(int pos, string name);
 
 void display();
+
+FriendBook& operator = (FriendBook &fb);
 
 private:
 
