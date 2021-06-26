@@ -8,6 +8,13 @@ FriendBook::FriendBook(string name){
         friendList = new string [3];
 }
 
+//custom copy constructor
+FriendBook::FriendBook(FriendBook &fb){
+    count=0;
+    friendList = new string [3];
+    copy (fb);
+}
+
 FriendBook::~FriendBook(){
         delete[] friendList;
         friendList=NULL;
@@ -24,6 +31,14 @@ void FriendBook::edtFriend(int pos, string name){
         pos++;
 }
 
+string FriendBook::getName(){
+    return this->your_name;
+}
+    
+string* FriendBook::getFriendList(){
+    return this->friendList;
+}
+
 void FriendBook::display(){
         cout<<endl;
         cout<<your_name+"'s friends are:"<<endl;
@@ -31,4 +46,29 @@ void FriendBook::display(){
                 cout<<friendList[i]+", ";
         }
         cout<<endl<<endl;
+}
+
+//Encapsulates deep copy logic
+void FriendBook::copy (FriendBook &fb){
+    
+    your_name = fb.getName();
+    
+    for(int i = 0; i<3; i++){
+        
+        if(fb.getFriendList()[i]!=""){
+            
+            addFriend(fb.getFriendList()[i]);
+            
+        }else{
+            
+            break;
+            
+        }
+    }
+}
+
+//custom = operator
+FriendBook& FriendBook::operator = (FriendBook &fb){
+    copy (fb);
+    return *this;
 }
