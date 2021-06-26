@@ -8,11 +8,11 @@ FriendBook::FriendBook(string name){
         friendList = new string [3];
 }
 
-//system-generated (not ideal)
+//custom copy constructor
 FriendBook::FriendBook(FriendBook &fb){
-    your_name =fb.your_name;
-    count=fb.count;
-    friendList = fb.friendList;
+    count=0;
+    friendList = new string [3];
+    copy (fb);
 }
 
 FriendBook::~FriendBook(){
@@ -67,10 +67,8 @@ void FriendBook::copy (FriendBook &fb){
     }
 }
 
-//system-generated (not ideal)
+//custom = operator
 FriendBook& FriendBook::operator = (FriendBook &fb){
-    your_name =fb.your_name;
-    count=fb.count;
-    friendList = fb.friendList;
+    copy (fb);
     return *this;
 }
